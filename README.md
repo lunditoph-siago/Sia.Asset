@@ -8,7 +8,7 @@ Asset module for Sia.NET
 using Sia;
 using Sia.Asset;
 
-public static partial class Example
+public static partial class Example2_StatefulAsset
 {
     public record struct TestState(int Curent)
     {
@@ -37,7 +37,7 @@ public static partial class Example
     }
 
     public class TestModule()
-        : AssetModule<Test, RTest, TestState>(
+        : TemplateEventSystemBase<Test, RTest, TestState>(
             SystemChain.Empty
                 .Add<TestUpdateSystem>())
     {
@@ -48,7 +48,7 @@ public static partial class Example
         }
 
         protected override TestState Snapshot<TEvent>(
-            in EntityRef entity, in Test asset, in TEvent e)
+            in EntityRef entity, in TEvent e)
             => e is WorldEvents.Add<Test> ? default : entity.Get<TestState>();
 
         protected override void HandleEvent<TEvent>(

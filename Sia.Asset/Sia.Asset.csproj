@@ -14,9 +14,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Sia" Version="1.9.8" />
-    <PackageReference Include="Sia.Reactors" Version="1.9.8" />
-    <PackageReference Include="Sia.CodeGenerators" Version="1.9.8" />
+    <PackageReference Include="Sia" Version="1.9.10" />
+    <PackageReference Include="Sia.Reactors" Version="1.9.10" />
+    <PackageReference Include="Sia.CodeGenerators" Version="1.9.10" />
   </ItemGroup>
 
 </Project>
