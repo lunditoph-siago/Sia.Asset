@@ -1,7 +1,5 @@
 namespace Sia_Asset_Examples;
 
-using System.Net.NetworkInformation;
-using System.Runtime.CompilerServices;
 using Sia;
 using Sia.Asset;
 
